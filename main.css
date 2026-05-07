@@ -1,0 +1,61 @@
+
+.home-hero {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("first.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+}
+
+
+.center-content {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6); /* Faded white/grey look */
+}
+
+.main-logo {
+    width: 300px;
+    height: 300PX;
+}
+
+.welcome-text {
+    font-size: 8rem;
+    font-family: serif;
+    margin-top: -20px;
+}
+
+
+.bottom-nav {
+    position: absolute;
+    bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 50px; 
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.res-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+}
+h3{
+    color: rgb(208, 146, 31);
+}
