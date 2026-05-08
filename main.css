@@ -1,4 +1,6 @@
-
+body{
+    margin: 0;
+}
 .home-hero {
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("first.jpg");
     background-size: cover;
@@ -16,7 +18,7 @@
 
 .center-content {
     text-align: center;
-    color: rgba(255, 255, 255, 0.6); /* Faded white/grey look */
+    color: rgba(255, 255, 255, 0.6); 
 }
 
 .main-logo {

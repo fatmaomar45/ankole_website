@@ -1,10 +1,12 @@
+
+body{
+    margin: 0;
+}
 .main-container{
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100vh;
-    padding: 0px;
-    margin: 0px;
 }
 .left{
     width: 50%;
@@ -13,10 +15,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
-    margin: 0px;
-    border-color: white;
-    border-style: double;
-}
+       border-color: white;
+    }
+
 .right{
     width: 50%;
     height: 100vh;
@@ -24,13 +25,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
-    margin: 0px;
     border-color: white;
-    border-style: double;
-
 }
-
-
 .bottom-nav {
     display: flex;
     align-items: center;
@@ -38,10 +34,10 @@
     bottom: 60px;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
-    align-items: center;
     padding: 10px 25px;
     border-radius: 50px; 
     gap: 20px;
+    margin-left: 35%;
 }
 
 .nav-links a {
@@ -57,28 +53,6 @@
     border-radius: 30px;
     color: white;
     text-decoration: none;
-}
-    
-
-
-.left{
-    width: 50%;
-    height: 100vh;
-    background-image: url("first.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    margin: 0px;
-}
-.right{
-    width: 50%;
-    height: 100vh;
-    background-image: url("kilimani.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    margin: 0px;
-
 }
 h2{ 
     color: white;

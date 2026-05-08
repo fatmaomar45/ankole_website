@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+}
+
+
 .mainbox {
     background-image: url("contacts.jpeg");
     width: 100vw;
@@ -38,11 +43,29 @@ h1,p{
     text-align: center;
 
 }
-.nav-bar{
-    background-color: black;
-    height: 30px;
-    width: 30;
-    align-items: center;
+ 
+.bottom-nav {
+    position: absolute;
+    bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 50px; 
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.res-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
 }

@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    background-image: url("reviews.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top:10%;
+
+}
+p{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+h2,h3{
+    color: white;
+    text-align: center;
+}
+bottom-nav {
+    position: absolute;
+    bottom: 60px;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 50px; 
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.res-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+}
