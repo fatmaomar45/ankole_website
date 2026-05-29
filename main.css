@@ -13,6 +13,8 @@ body{
     justify-content: center;
     position: relative;
     margin: 0;
+    transform: 0.25s ease;
+    
 }
 
 

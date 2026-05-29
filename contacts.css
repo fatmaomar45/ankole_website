@@ -25,7 +25,8 @@ body{
     align-items: center;
     padding: 20px;           
     background-color: rgba(0, 0, 0, 0.4); 
-    margin: 0;              
+    margin: 0;   
+    transition: 0.25 ease-in;    
 }
 .rightbox{
 height: auto;            
@@ -36,7 +37,8 @@ height: auto;
     align-items: center;
     padding: 20px;           
     background-color: rgba(0, 0, 0, 0.4); 
-    margin: 0;              
+    margin: 0;   
+    transition: 0.25 ease-in;           
 }
 h1,p{
     color: white;
@@ -69,3 +71,4 @@ h1,p{
     color: white;
     text-decoration: none;
 }
+

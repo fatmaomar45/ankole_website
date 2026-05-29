@@ -15,7 +15,8 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
-       border-color: white;
+    border-color: white;
+    transition: 0.25s ease-in;
     }
 
 .right{
