@@ -1,74 +1,119 @@
-body{
-    margin: 0;
-}
+body { 
+    margin: 0; 
+} 
 
-
-.mainbox {
-    background-image: url("contacts.jpeg");
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: row;
+.mainbox { 
+    background-image: url("contacts.jpeg"); 
+    width: 100vw; 
+    height: 100vh; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    display: flex; 
+    flex-direction: row; 
     justify-content: center; 
-    align-items: center;    
-    gap: 5%;                 
-}
+    align-items: center; 
+    gap: 5%; 
+} 
 
-.leftbox{
-    height: auto;            
-    min-height: 35%;
+.leftbox { 
+    height: auto; 
+    min-height: 35%; 
     border: 2px double white; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;           
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
     background-color: rgba(0, 0, 0, 0.4); 
-    margin: 0;   
-    transition: 0.25 ease-in;    
-}
-.rightbox{
-height: auto;            
-    min-height: 35%;
-    border: 2px double white; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;           
-    background-color: rgba(0, 0, 0, 0.4); 
-    margin: 0;   
-    transition: 0.25 ease-in;           
-}
-h1,p{
-    color: white;
-    text-align: center;
+    margin: 0; 
+    transition: 0.25s ease-in; 
+} 
 
-}
- 
-.bottom-nav {
-    position: absolute;
-    bottom: 60px;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    padding: 10px 25px;
+.rightbox { 
+    height: auto; 
+    min-height: 35%; 
+    border: 2px double white; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    margin: 0; 
+    transition: 0.25s ease-in; 
+} 
+
+h1, p { 
+    color: white; 
+    text-align: center; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+} 
+
+
+.bottom-nav { 
+    display: flex; 
+    align-items: center; 
+    position: absolute; 
+    bottom: 60px; 
+    
+   
+    left: 50%;
+    transform: translateX(-50%); 
+    
+    background-color: rgba(0, 0, 0, 0.85); 
+    padding: 10px 25px; 
     border-radius: 50px; 
-    gap: 20px;
+    gap: 20px; 
+    white-space: nowrap; 
+    z-index: 1000;
+} 
+
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.nav-links a {
+.nav-icons .icon {
     color: white;
+    cursor: pointer;
+}
+
+.nav-icons a {
     text-decoration: none;
-    margin: 0 10px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a { 
+    color: #a3a3a3; 
+    text-decoration: none; 
+    margin: 0 10px; 
+    font-size: 0.9rem; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    transition: color 0.2s ease;
+} 
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.res-button { 
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 8px 20px; 
+    border-radius: 30px; 
+    color: white; 
+    text-decoration: none; 
     font-size: 0.9rem;
-}
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    transition: background-color 0.2s ease;
+} 
 
-.res-button {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 8px 20px;
-    border-radius: 30px;
-    color: white;
-    text-decoration: none;
+.res-button:hover {
+    background-color: rgba(255, 255, 255, 0.35);
 }
-

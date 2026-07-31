@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a table at Ankole Grill">
+    <title>Reservation - Ankole Grill</title>
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+
+    <main class="reservation-container">
+       
+        <div class="brand-panel">
+            <div class="logo-wrapper">
+                <img src="logo.png" alt="Ankole Grill Logo" class="brand-logo"> 
+            </div>
+            <div class="brand-text">
+                <h3>Karibu</h3>
+                <h1>Reservation</h1> 
+            </div>
+        </div>
+
+       
+        <div class="form-panel">
+            <form action="#" method="POST" class="booking-form">
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your first name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <select id="location" required>
+                        <option value="" disabled selected hidden>Choose a location</option>
+                        <option value="kitisuru">Kitisuru (Open 9 am - Closes 11 pm)</option>
+                        <option value="kilimani">Kilimani (Open 7:30 am - Closes 11 pm)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="e.g. info@email.com" required> <!-- Fixed e.ginfo placeholder spacing -->
+                </div>
+
+                <div class="form-group">
+                    <label for="tel">Tel / Cell</label>
+                    <input type="tel" id="tel" placeholder="e.g. 0700 000 000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" min="1" max="8" placeholder="(maximum of 8 guests only)" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+
+                    <div class="form-group half-width">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    
+    <nav class="bottom-nav">
+        <div class="nav-icons">
+            <span class="icon">☰</span>
+            <a href="clock.html" title="Clock">🕒</a>
+        </div>
+        <div class="nav-links">
+            <a href="main.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="events.html">Events</a>
+            <a href="live.html">Live</a>
+            <a href="contacts.html">Contacts</a>
+        </div>
+        <a href="reservation.html" class="res-button active">Reservations</a>
+    </nav>
+
+</body>
+</html>

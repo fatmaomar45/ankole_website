@@ -1,68 +1,145 @@
-
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+body, html { 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+    height: 100%; 
     overflow-x: hidden; 
-    
-}
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+} 
 
-.main-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
-}
 
-.left, .center, .right {
+.main-container { 
+    display: flex; 
+    flex-direction: row; 
+    width: 100%; 
+    height: 100vh; 
+} 
+
+
+.left, .center, .right { 
     width: 33.33%; 
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
     justify-content: center; 
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    color: white;
+    text-align: center; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: white; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+} 
+
+.left { 
+    background-image: url("accra.jpg"); 
+} 
+
+.center { 
+    background-image: url("nairobipavilion_2024.jpg"); 
+} 
+
+.right { 
+    background-image: url("Zanzibar.jpg"); 
+} 
+
+
+.left h3, .center h3, .right h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.left h1, .center h1, .right h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); 
+}
+
+.left p, .center p, .right p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    max-width: 280px;
+    margin: 0 auto; 
 }
 
 
-.left { background-image: url("accra.jpg")}
-.center { background-image: url('nairobipavilion_2024.jpg'); }
-.right { background-image: url('Zanzibar.jpg'); }
+.bottom-nav { 
+    position: fixed; 
+    bottom: 40px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex; 
+    align-items: center; 
+    padding: 12px 30px; 
+    border-radius: 50px; 
+    gap: 20px; 
+    z-index: 1000; 
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+} 
 
 
-.bottom-nav {
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.85);
+.nav-icons {
     display: flex;
     align-items: center;
-    padding: 12px 30px;
-    border-radius: 50px; 
-    gap: 20px;
-    z-index: 1000;
+    gap: 12px;
 }
 
-.nav-links a {
+.nav-icons .icon {
     color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.9rem;
+    cursor: pointer;
 }
 
-.nav-links a.active {
+.nav-icons a {
+    text-decoration: none;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a { 
+    color: #a3a3a3; 
+    text-decoration: none; 
+    margin: 0 10px; 
+    font-size: 0.9rem; 
+    transition: color 0.2s ease;
+} 
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-links a.active { 
     color: orange; 
+    font-weight: 500;
+} 
+
+
+.res-button { 
+    background-color: orange; 
+    padding: 8px 20px; 
+    border-radius: 30px; 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 500; 
+    font-size: 0.9rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.res-button {
-    background-color: orange; 
-    padding: 8px 20px;
-    border-radius: 30px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.res-button:hover {
+    transform: scale(1.03); 
+    background-color: #ff9800;
 }
