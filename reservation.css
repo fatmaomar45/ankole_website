@@ -119,7 +119,7 @@ body, html {
     color: #ffffff;
     font-size: 1rem;
     outline: none;
-    transition: border-color 0.2s, background-color 0.2s;
+    transition: border-color 0.4s, background-color 0.4s;
     box-sizing: border-box;
     width: 100%;
 }
@@ -158,7 +158,7 @@ body, html {
     padding: 14px;
     margin-top: 10px;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: background-color 0.4s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .submit-button:hover {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock - Ankole Grill</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <main class="clock-container">
+        <div class="clock-card">
+            <h1>Ankole Grill</h1>
+            <div class="clock-display" id="clock">00:00:00</div>
+            <p class="clock-date" id="date"></p>
+        </div>
+    </main>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { hour12: false });
+            const dateString = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            document.getElementById('clock').textContent = timeString;
+            document.getElementById('date').textContent = dateString;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+
+    <nav class="bottom-nav">
+        <div class="nav-icons">
+            <span class="icon">☰</span>
+            <a href="clock.html" title="Clock">🕒</a>
+        </div>
+        <div class="nav-links">
+            <a href="main.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="events.html">Events</a>
+            <a href="live.html">Live</a>
+            <a href="contacts.html">Contacts</a>
+        </div>
+        <a href="reservation.html" class="res-button">Reservations</a>
+    </nav>
+</body>
+</html>
