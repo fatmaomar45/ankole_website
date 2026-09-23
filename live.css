@@ -1,16 +1,3 @@
-
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #0b0b0b;
-    color: #ffffff;
-}
-
-
 .live-container {
     width: 100%;
     min-height: 100vh;
@@ -70,23 +57,6 @@ body, html {
     flex-wrap: wrap;
 }
 
-.highlight-item {
-    background-color: rgba(18, 18, 18, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 30px 25px;
-    width: 220px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-    transition: transform 0.5s ease-in-out, border-color 0.5s ease-in-out;
-}
-
-.highlight-item:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
 .highlight-item h2 {
     font-size: 1.3rem;
     font-weight: 600;
@@ -103,71 +73,13 @@ body, html {
     margin: 0;
 }
 
-
-.bottom-nav {
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    padding: 10px 25px;
-    border-radius: 50px;
-    gap: 20px;
-    z-index: 1000;
-    white-space: nowrap;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.nav-icons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.nav-icons .icon {
-    color: white;
-    cursor: pointer;
-}
-
-.nav-icons a {
-    text-decoration: none;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links a {
-    color: #a3a3a3;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.9rem;
-    transition: color 0.2s ease;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: white;
-    font-weight: 500;
-}
-
-.res-button {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 8px 20px;
-    border-radius: 30px;
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    transition: background-color 0.2s ease;
-}
-
-.res-button:hover {
-    background-color: rgba(255, 255, 255, 0.35);
+@media (max-width: 600px) {
+    .live-content h1 {
+        font-size: 2rem;
+    }
+    
+    .highlight-item {
+        width: 100%;
+        max-width: 300px;
+    }
 }
