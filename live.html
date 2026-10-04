@@ -6,7 +6,7 @@
     <meta name="description" content="Ankole Grill - Live Music & Entertainment">
     <title>Live - Ankole Grill</title>
     <link rel="stylesheet" href="shared.css">
-<link rel="stylesheet" href="live.css">
+    <link rel="stylesheet" href="live.css">
 </head>
 <body>
     <main class="live-container">
@@ -30,12 +30,12 @@
         </div>
     </main>
 
-    <nav class="bottom-nav">
+    <nav class="bottom-nav" aria-label="Main navigation">
         <div class="nav-icons">
-            <span class="icon">☰</span>
+            <button type="button" class="icon" aria-label="Open navigation menu" aria-expanded="false" aria-controls="live-nav-links">☰</button>
             <a href="clock.html" title="Clock">🕒</a>
         </div>
-        <div class="nav-links">
+        <div class="nav-links" id="live-nav-links">
             <a href="main.html">Home</a>
             <a href="menu.html">Menu</a>
             <a href="reviews.html">Reviews</a>

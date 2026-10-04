@@ -6,24 +6,21 @@
     <meta name="description" content="Ankole Grill - Welcome to our restaurant">
     <title>Ankole Grill - Home</title>
     <link rel="stylesheet" href="shared.css">
-<link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
     <main class="home-hero">
         <div class="center-content">
-            
-            <img src="logo.svg" alt="Ankole Grill Logo" class="main-logo"> 
+            <img src="logo.svg" alt="Ankole Grill Logo" class="main-logo">
             <h1 class="welcome-text">Welcome</h1>
         </div>
 
-       
-        <nav class="bottom-nav">
+        <nav class="bottom-nav" aria-label="Main navigation">
             <div class="nav-icons">
-                <span class="icon">☰</span>
+                <button type="button" class="icon" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav-links">☰</button>
                 <a href="clock.html" title="Clock">🕒</a>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="main-nav-links">
                 <a href="main.html" class="active">Home</a>
                 <a href="menu.html">Menu</a>
                 <a href="reviews.html">Reviews</a>
@@ -31,7 +28,7 @@
                 <a href="live.html">Live</a>
                 <a href="contacts.html">Contacts</a>
             </div>
-            
+
             <a href="reservation.html" class="res-button">Reservations</a>
         </nav>
     </main>

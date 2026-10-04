@@ -54,6 +54,10 @@ a {
     color: inherit;
 }
 
+button {
+    font: inherit;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
@@ -62,7 +66,6 @@ p {
     margin: 0;
 }
 
-/* Bottom Navigation - Shared */
 .bottom-nav {
     display: flex;
     align-items: center;
@@ -94,6 +97,7 @@ p {
     background: transparent;
     border: none;
     padding: 0;
+    line-height: 1;
 }
 
 .nav-icons a {
@@ -148,7 +152,6 @@ p {
     font-weight: 500;
 }
 
-/* Form Styles - Shared */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -218,7 +221,6 @@ p {
     transform: scale(0.99);
 }
 
-/* Card Styles - Shared */
 .card {
     background-color: var(--color-card-bg);
     backdrop-filter: blur(8px);
@@ -228,7 +230,6 @@ p {
     box-shadow: var(--shadow-card);
 }
 
-/* Highlight Items - Shared */
 .highlight-item {
     background-color: rgba(18, 18, 18, 0.85);
     backdrop-filter: blur(8px);
@@ -246,7 +247,6 @@ p {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Utility Classes */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
@@ -263,7 +263,6 @@ p {
     border: 0;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     .bottom-nav {
         bottom: 20px;

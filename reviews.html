@@ -6,22 +6,19 @@
     <meta name="description" content="Reviews from Ankole Grill customers">
     <title>Reviews - Ankole Grill</title>
     <link rel="stylesheet" href="shared.css">
-<link rel="stylesheet" href="reviews.css">
+    <link rel="stylesheet" href="reviews.css">
 </head>
 <body>
-
-   
     <main class="reviews-container">
         <h1>Reviews</h1>
-        
-        
+
         <div class="review-card">
             <p class="review-text">
-                "This place is run by educated, innovative & creative people! The architectural layout, seating, ambience, lighting, cutlery; servings, design; has been impeccably well thought out! Even the washrooms were excellent!<br><br>
+                "This place is run by educated, innovative & creative people! The architectural layout, seating, ambience, lighting, cutlery; servings, design; has been impeccably well thought out[...]
                 The food was AWESOME! This is surprising considering the fact we were there on a Saturday night & they almost had no space!<br><br>
                 We were extremely well serviced too! Rare to find such finesse in Kenya! You must go visit them!"
             </p>
-            
+
             <div class="review-author">
                 <span class="author-name">irfan virji</span>
                 <span class="author-location">KITISURU</span>
@@ -29,13 +26,12 @@
         </div>
     </main>
 
-    
-    <nav class="bottom-nav">
+    <nav class="bottom-nav" aria-label="Main navigation">
         <div class="nav-icons">
-            <span class="icon">☰</span>
+            <button type="button" class="icon" aria-label="Open navigation menu" aria-expanded="false" aria-controls="reviews-nav-links">☰</button>
             <a href="clock.html" title="Clock">🕒</a>
         </div>
-        <div class="nav-links">
+        <div class="nav-links" id="reviews-nav-links">
             <a href="main.html">Home</a>
             <a href="menu.html">Menu</a>
             <a href="reviews.html" class="active">Reviews</a>
@@ -43,7 +39,7 @@
             <a href="live.html">Live</a>
             <a href="contacts.html">Contacts</a>
         </div>
-                <a href="reservation.html" class="res-button">Reservations</a>
+        <a href="reservation.html" class="res-button">Reservations</a>
     </nav>
     <script src="main.js"></script>
 </body>

@@ -6,35 +6,29 @@
     <meta name="description" content="Explore Ankole Grill menu">
     <title>Menu - Ankole Grill</title>
     <link rel="stylesheet" href="shared.css">
-<link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-
-    
     <main class="main-container">
-         
         <div class="left">
             <h3>Karibu</h3>
             <h1>Kitisuru</h1>
             <h2>Explore Our Menu</h2>
         </div>
 
-       
         <div class="right">
             <h3>Discover</h3>
             <h1>Kilimani</h1>
             <h2>Explore Our Menu</h2>
         </div>
-        
     </main>
 
-    
-    <nav class="bottom-nav">
+    <nav class="bottom-nav" aria-label="Main navigation">
         <div class="nav-icons">
-            <span class="icon">☰</span>
+            <button type="button" class="icon" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu-nav-links">☰</button>
             <a href="clock.html" title="Clock">🕒</a>
         </div>
-        <div class="nav-links">
+        <div class="nav-links" id="menu-nav-links">
             <a href="main.html">Home</a>
             <a href="menu.html" class="active">Menu</a>
             <a href="reviews.html">Reviews</a>
@@ -42,7 +36,7 @@
             <a href="live.html">Live</a>
             <a href="contacts.html">Contacts</a>
         </div>
-                <a href="reservation.html" class="res-button">Reservations</a>
+        <a href="reservation.html" class="res-button">Reservations</a>
     </nav>
     <script src="main.js"></script>
 </body>
