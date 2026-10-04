@@ -221,6 +221,21 @@ p {
     transform: scale(0.99);
 }
 
+.form-status {
+    margin-top: 14px;
+    min-height: 24px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.form-status.success {
+    color: #7ee8a2;
+}
+
+.form-status.error {
+    color: #ff8b8b;
+}
+
 .card {
     background-color: var(--color-card-bg);
     backdrop-filter: blur(8px);

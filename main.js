@@ -124,12 +124,61 @@ function validateReservationForm(form) {
     return isValid;
 }
 
+function setReservationMessage(message, isError = false) {
+    const statusElement = document.getElementById('formStatus');
+    if (!statusElement) return;
+
+    statusElement.textContent = message;
+    statusElement.classList.toggle('error', isError);
+    statusElement.classList.toggle('success', !isError);
+}
+
 const reservationForm = document.querySelector('.booking-form');
 if (reservationForm) {
+    const dateField = reservationForm.querySelector('#date');
+    if (dateField) {
+        const today = new Date();
+        const formattedDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+            .toISOString()
+            .split('T')[0];
+        dateField.min = formattedDate;
+    }
+
     reservationForm.addEventListener('submit', function(e) {
         if (!validateReservationForm(this)) {
             e.preventDefault();
-            alert('Please fill in all required fields correctly.');
+            setReservationMessage('Please fill in all required fields correctly.', true);
+            return;
+        }
+
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const booking = {
+            name: formData.get('name'),
+            location: formData.get('location'),
+            email: formData.get('email'),
+            tel: formData.get('tel'),
+            guests: formData.get('guests'),
+            date: formData.get('date'),
+            time: formData.get('time'),
+            submittedAt: new Date().toISOString()
+        };
+
+        try {
+            const existing = JSON.parse(localStorage.getItem('ankoleReservations') || '[]');
+            existing.push(booking);
+            localStorage.setItem('ankoleReservations', JSON.stringify(existing));
+
+            setReservationMessage('Reservation submitted successfully. We will contact you soon.', false);
+            this.reset();
+            this.querySelectorAll('input, select').forEach(field => {
+                field.style.borderColor = '';
+                field.removeAttribute('aria-invalid');
+            });
+        } catch (error) {
+            console.error('Reservation storage failed:', error);
+            setReservationMessage('Your reservation could not be saved in this browser. Please try again.', true);
         }
     });
 

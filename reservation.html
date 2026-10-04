@@ -21,7 +21,7 @@
         </div>
 
         <div class="form-panel">
-            <form action="#" method="POST" class="booking-form">
+            <form action="#" method="POST" class="booking-form" novalidate>
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your first name" required>
@@ -64,16 +64,17 @@
                 </div>
 
                 <button type="submit" class="submit-button">Submit</button>
+                <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
             </form>
         </div>
     </main>
 
-    <nav class="bottom-nav">
+    <nav class="bottom-nav" aria-label="Main navigation">
         <div class="nav-icons">
-            <span class="icon" aria-label="Open navigation menu" aria-expanded="false">☰</span>
+            <button type="button" class="icon" aria-label="Open navigation menu" aria-expanded="false" aria-controls="reservation-nav-links">☰</button>
             <a href="clock.html" title="Clock">🕒</a>
         </div>
-        <div class="nav-links">
+        <div class="nav-links" id="reservation-nav-links">
             <a href="main.html">Home</a>
             <a href="menu.html">Menu</a>
             <a href="reviews.html">Reviews</a>
