@@ -91,6 +91,9 @@ p {
     color: white;
     cursor: pointer;
     font-size: 1.1rem;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .nav-icons a {
@@ -117,6 +120,10 @@ p {
 .nav-links a.active {
     color: var(--color-text);
     font-weight: 500;
+}
+
+.nav-links.open {
+    display: flex;
 }
 
 .res-button {
@@ -263,22 +270,22 @@ p {
         padding: 8px 15px;
         gap: 12px;
     }
-    
+
     .nav-links a {
         margin: 0 5px;
         font-size: 0.8rem;
     }
-    
+
     .res-button {
         padding: 6px 14px;
         font-size: 0.8rem;
     }
-    
+
     .form-row {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .half-width {
         width: 100%;
     }
@@ -290,11 +297,26 @@ p {
         justify-content: center;
         border-radius: var(--radius-lg);
     }
-    
+
     .nav-links {
+        display: none;
         order: 3;
         width: 100%;
         justify-content: center;
         margin-top: 8px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 20px;
+        border-radius: 16px 16px 0 0;
+        margin-bottom: 10px;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .nav-links.open {
+        display: flex;
     }
 }

@@ -9,22 +9,22 @@ document.addEventListener('DOMContentLoaded', function() {
 function initClock() {
     const clockElement = document.getElementById('clock');
     const dateElement = document.getElementById('date');
-    
+
     if (!clockElement || !dateElement) return;
-    
+
     function updateClock() {
         const now = new Date();
         const timeString = now.toLocaleTimeString('en-US', { hour12: false });
-        const dateString = now.toLocaleDateString('en-US', { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
+        const dateString = now.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
         });
         clockElement.textContent = timeString;
         dateElement.textContent = dateString;
     }
-    
+
     updateClock();
     setInterval(updateClock, 1000);
 }
@@ -32,35 +32,32 @@ function initClock() {
 function initMobileMenu() {
     const menuIcon = document.querySelector('.nav-icons .icon');
     const navLinks = document.querySelector('.nav-links');
-    
+
     if (!menuIcon || !navLinks) return;
-    
+
     let isOpen = false;
-    
-    menuIcon.addEventListener('click', function() {
-        isOpen = !isOpen;
-        navLinks.style.display = isOpen ? 'flex' : 'none';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.bottom = '100%';
-        navLinks.style.left = '0';
-        navLinks.style.right = '0';
-        navLinks.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
-        navLinks.style.padding = '20px';
-        navLinks.style.borderRadius = '16px 16px 0 0';
-        navLinks.style.marginBottom = '10px';
-        navLinks.style.gap = '15px';
-        
+
+    const updateMenuState = () => {
+        navLinks.classList.toggle('open', isOpen);
         menuIcon.textContent = isOpen ? '✕' : '☰';
+        menuIcon.setAttribute('aria-expanded', String(isOpen));
+        menuIcon.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    menuIcon.addEventListener('click', function(e) {
+        e.stopPropagation();
+        isOpen = !isOpen;
+        updateMenuState();
     });
-    
+
     document.addEventListener('click', function(e) {
         if (isOpen && !e.target.closest('.bottom-nav')) {
             isOpen = false;
-            navLinks.style.display = 'none';
-            menuIcon.textContent = '☰';
+            updateMenuState();
         }
     });
+
+    updateMenuState();
 }
 
 function initSmoothScroll() {
@@ -78,34 +75,52 @@ function initSmoothScroll() {
 function validateReservationForm(form) {
     const requiredFields = form.querySelectorAll('[required]');
     let isValid = true;
-    
+
     requiredFields.forEach(field => {
-        if (!field.value.trim()) {
+        const hasValue = field.value.trim();
+        const isInvalid = !hasValue;
+
+        field.setAttribute('aria-invalid', String(isInvalid));
+
+        if (isInvalid) {
             isValid = false;
             field.style.borderColor = '#ff4444';
         } else {
             field.style.borderColor = '';
+            field.removeAttribute('aria-invalid');
         }
     });
-    
+
     const emailField = form.querySelector('input[type="email"]');
     if (emailField && emailField.value) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailField.value)) {
+        const isInvalid = !emailRegex.test(emailField.value);
+
+        emailField.setAttribute('aria-invalid', String(isInvalid));
+        if (isInvalid) {
             isValid = false;
             emailField.style.borderColor = '#ff4444';
+        } else {
+            emailField.style.borderColor = '';
+            emailField.removeAttribute('aria-invalid');
         }
     }
-    
+
     const telField = form.querySelector('input[type="tel"]');
     if (telField && telField.value) {
         const telRegex = /^[\d\s\-\+\(\)]{10,}$/;
-        if (!telRegex.test(telField.value)) {
+        const isInvalid = !telRegex.test(telField.value);
+
+        telField.setAttribute('aria-invalid', String(isInvalid));
+        if (isInvalid) {
             isValid = false;
             telField.style.borderColor = '#ff4444';
+        } else {
+            telField.style.borderColor = '';
+            telField.removeAttribute('aria-invalid');
         }
     }
-    
+
     return isValid;
 }
 
@@ -117,11 +132,13 @@ if (reservationForm) {
             alert('Please fill in all required fields correctly.');
         }
     });
-    
+
     reservationForm.querySelectorAll('input, select').forEach(field => {
         field.addEventListener('input', function() {
-            if (this.style.borderColor === 'rgb(255, 68, 68)') {
+            const isErrorState = this.style.borderColor === 'rgb(255, 68, 68)';
+            if (isErrorState) {
                 this.style.borderColor = '';
+                this.removeAttribute('aria-invalid');
             }
         });
     });

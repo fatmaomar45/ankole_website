@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clock - Ankole Grill</title>
     <link rel="stylesheet" href="shared.css">
-<link rel="stylesheet" href="clock.css">
+    <link rel="stylesheet" href="clock.css">
 </head>
 <body>
     <main class="clock-container">
@@ -15,21 +15,10 @@
             <p class="clock-date" id="date"></p>
         </div>
     </main>
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString('en-US', { hour12: false });
-            const dateString = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-            document.getElementById('clock').textContent = timeString;
-            document.getElementById('date').textContent = dateString;
-        }
-        updateClock();
-        setInterval(updateClock, 1000);
-    </script>
 
     <nav class="bottom-nav">
         <div class="nav-icons">
-            <span class="icon">☰</span>
+            <span class="icon" aria-label="Open navigation menu" aria-expanded="false">☰</span>
             <a href="clock.html" title="Clock">🕒</a>
         </div>
         <div class="nav-links">
@@ -42,5 +31,6 @@
         </div>
         <a href="reservation.html" class="res-button">Reservations</a>
     </nav>
+    <script src="main.js"></script>
 </body>
 </html>
