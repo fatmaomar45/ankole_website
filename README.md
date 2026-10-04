@@ -54,25 +54,6 @@ Then visit:
 http://localhost:8000/main.html
 ```
 
-## Known issues to fix
-
-1. Missing project documentation and setup instructions.
-2. Reservation form does not submit to a backend or email service; it only validates client-side input.
-3. `clock.html` duplicates the clock logic already implemented in `main.js`, which creates inconsistent maintenance and duplicated behavior.
-4. The mobile menu interaction is partially implemented and may not behave consistently across pages; the nav menu should be initialized more predictably.
-5. The navigation system is repeated across many pages instead of being generated from a shared template or component, which makes styling and updates harder to maintain.
-6. Accessibility should be improved with better focus states, ARIA labels, and semantic form labeling for screen readers.
-7. Image assets are stored locally and not optimized for web delivery; resizing/compression would improve performance.
-8. There is no build tool, tests, or deployment workflow, so the project is difficult to maintain at scale.
-
-## Suggested next improvements
-
-- Add a proper backend or form handler for booking submissions.
-- Centralize JavaScript behavior to avoid duplication.
-- Improve responsiveness and mobile navigation tests.
-- Add semantic accessibility improvements.
-- Add automated checks or linting if the site grows further.
-
 ## License
 
 No explicit license is currently declared in this repository.
